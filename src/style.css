@@ -1,0 +1,200 @@
+
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+}
+body {
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  min-width: 320px;
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-size: 18px;
+}
+h2 {
+  font-weight: 500 !important;
+  font-size: 60px;
+}
+h3 {
+  font-weight: 500 !important;
+  font-size: 47px;
+  letter-spacing: -4px;
+}
+main {
+  padding: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+@media (max-width: 30em) {
+  main .card8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  main .card8 .image {
+    width: 100%;
+  }
+}
+@media (width >= 40em) {
+  main {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (width >= 64em) {
+  main {
+    grid-template-areas:
+      "card1 card2 card2 card3"
+      "card1 card5 card6 card3"
+      "card4 card5 card6 card3"
+      "card4 card7 card8 card8";
+  }
+}
+main {
+  background-color: hsl(35, 100%, 98%);
+}
+.card {
+  padding: 2em;
+  border-radius: 6px;
+}
+
+.card.card1 {
+  grid-area: card1;
+}
+.card.card2 {
+  grid-area: card2;
+}
+.card.card3 {
+  grid-area: card3;
+}
+.card.card4 {
+  grid-area: card4;
+}
+.card.card5 {
+  grid-area: card5;
+}
+.card.card6 {
+  grid-area: card6;
+}
+.card.card7 {
+  grid-area: card7;
+}
+.card.card8 {
+  grid-area: card8;
+}
+
+.card .image {
+  width: 100%;
+}
+/* .card .image img {
+  width: 100%;
+  display: block;
+} */
+/* main .image {
+  max-width: 90%;
+} */
+main .image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+main .card1 {
+  background-color: var(--yellow-100);
+  color: var(--black);
+}
+main .card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+main .card2 .image {
+  width: 30%;
+  margin: 15px;
+}
+main .card1,
+main .card4,
+main .card5,
+main .card6,
+main .card7,
+main .card3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  gap: 40px;
+}
+main .card1,
+main .card4,
+main .card5,
+main .card6,
+main .card7,
+main .card3,
+main .card2,
+main .card8 {
+  border-radius: 15px;
+}
+main .card1 span {
+  color: var(--purple-500);
+}
+main .card4,
+main .card6 {
+  background-color: var(--yellow-500);
+  color: var(--black);
+}
+main .card5,
+main .card7 {
+  background-color: white;
+  color: var(--black);
+}
+main .card2,
+main .card8 {
+  background-color: var(--purple-500);
+  color: white;
+}
+
+main .card2 span {
+  color: var(--yellow-500);
+}
+main .card3 {
+  background-color: var(--purple-100);
+  color: var(--black);
+}
+main .card8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+main .card8 .image {
+  width: 50%;
+}
